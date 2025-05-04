@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Throwable;
 
-class Car extends Model
+class Vehicle extends Model
 {
     use HasFactory, HasUuids;
 
@@ -28,9 +28,9 @@ class Car extends Model
 
     protected static function booted()
     {
-        self::deleted(function (Car $car) {
+        self::deleted(function (Vehicle $vehicle) {
             try {
-                $image_name = explode('image/', $car['image']);
+                $image_name = explode('image/', $vehicle['image']);
                 Storage::disk('public')->delete('image/'.$image_name[1]);
             } catch (Throwable) {
             }

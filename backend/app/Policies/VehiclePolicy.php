@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Car;
 use App\Models\User;
+use App\Models\Vehicle;
 use Illuminate\Auth\Access\Response;
 
-class CarPolicy
+class VehiclePolicy
 {
     /**
      * Determine whether the user can view any models.
@@ -19,7 +19,7 @@ class CarPolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, Car $car): bool
+    public function view(User $user, Vehicle $vehicle): bool
     {
         //
     }
@@ -35,7 +35,7 @@ class CarPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, Car $car): bool
+    public function update(User $user, Vehicle $vehicle): bool
     {
         //
     }
@@ -43,7 +43,7 @@ class CarPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Car $car): bool
+    public function delete(User $user, Vehicle $vehicle): bool
     {
         //
     }
@@ -51,7 +51,7 @@ class CarPolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, Car $car): bool
+    public function restore(User $user, Vehicle $vehicle): bool
     {
         //
     }
@@ -59,7 +59,7 @@ class CarPolicy
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, Car $car): bool
+    public function forceDelete(User $user, Vehicle $vehicle): bool
     {
         //
     }
