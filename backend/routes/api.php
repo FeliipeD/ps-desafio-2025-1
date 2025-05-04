@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CarController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,9 +14,22 @@ Route::middleware(['auth:sanctum'])->group(function () {
     });
 });
 
+// Route::get('/categories', [CategoryController::class, 'index']);
+// Route::post('/categories', [CategoryController::class, 'store']);
+// Route::get('/categories/{id}', [CategoryController::class, 'show']);
+// Route::put('/categories/{id}', [CategoryController::class, 'update']);
+// Route::delete('categories/{id}', [CategoryController::class, 'destroy']);
+
 Route::middleware(['auth:sanctum', 'can:admin'])->group(function () {
     Route::apiResource('/users', UserController::class);
+    Route::apiResource('/categories', CategoryController::class)->except(['index', 'show']);
+    Route::apiResource('/cars', CarController::class)->except(['index', 'show']);
 });
+
+Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('/categories/{id}', [CategoryController::class, 'show']);
+Route::get('/cars', [CarController::class, 'index']);
+Route::get('/cars/{id}', [CarController::class, 'show']);
 
 Route::get('/', function () {
     return ['Laravel' => app()->version()];
