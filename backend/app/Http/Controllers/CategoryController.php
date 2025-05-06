@@ -22,7 +22,7 @@ class CategoryController extends Controller
      */
     public function index(): JsonResponse
     {
-        $categories = $this->category->with('cars')->get();
+        $categories = $this->category->with('vehicles')->get();
 
         return response()->json($categories, Response::HTTP_OK);
     }
@@ -52,7 +52,7 @@ class CategoryController extends Controller
      */
     public function show($id): JsonResponse
     {
-        $category = $this->category->findOrFail($id);
+        $category = $this->category->with('vehicles')->findOrFail($id);
 
         return response()->json($category, response::HTTP_OK);
     }

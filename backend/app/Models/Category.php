@@ -14,16 +14,16 @@ class Category extends Model
         'name',
     ];
 
-    public function cars()
+    public function vehicles()
     {
-        return $this->hasMany(Car::class, 'category_id', 'id');
+        return $this->hasMany(Vehicle::class, 'category_id', 'id');
     }
 
     protected static function booted()
     {
         self::deleting(function (Category $category) {
-            $category->cars()->each(function (Car $car) {
-                $car->delete();
+            $category->vehicles()->each(function (Vehicle $vehicle) {
+                $vehicle->delete();
             });
         });
     }

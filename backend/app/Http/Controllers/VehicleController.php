@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreVehicleRequest;
-use App\Http\Requests\UpdateCarRequest;
+use App\Http\Requests\UpdateVehicleRequest;
 use App\Models\Vehicle;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -79,7 +79,7 @@ class VehicleController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCarRequest $request, $id): JsonResponse
+    public function update(UpdateVehicleRequest $request, $id): JsonResponse
     {
         $vehicle = $this->vehicle->with('category')->findOrFail($id);
 
