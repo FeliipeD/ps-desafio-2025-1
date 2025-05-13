@@ -35,10 +35,10 @@ export default function FormFieldsCategory({
           <Input defaultValue={category.id} type="text" name="id" hidden />
         )}
         <FormField>
-          <label htmlFor='name' required={!category}>
+          <Label htmlFor='name' required={!category}>
             Categoria
-          </label>
-          <input
+          </Label>
+          <Input
             name="name"
             id="name"
             placeholder="Insira a categoria"

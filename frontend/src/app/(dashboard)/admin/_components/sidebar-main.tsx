@@ -15,6 +15,8 @@ import { LuBookOpen, LuHome, LuLayers, LuLogOut, LuUsers } from 'react-icons/lu'
 import { DropdownMenuItem } from '@/components/dropdown-menu'
 import { signOut, useSession } from 'next-auth/react'
 import logo from '@/assets/img/logo.jpeg'
+import { IoCarSportOutline } from "react-icons/io5";
+import { FaList } from "react-icons/fa";
 
 export function SidebarMain() {
   const session = useSession()
@@ -36,11 +38,11 @@ export function SidebarMain() {
           <SidebarNavLinkLabel>Usuários</SidebarNavLinkLabel>
         </SidebarNavLink>
         <SidebarNavLink href="/admin/veiculos">
-          <LuBookOpen />
-          <SidebarNavLinkLabel>Veiculos</SidebarNavLinkLabel>
+          <IoCarSportOutline />
+          <SidebarNavLinkLabel>Veículos</SidebarNavLinkLabel>
         </SidebarNavLink>
         <SidebarNavLink href="/admin/categorias">
-          <LuLayers />
+          <FaList />
           <SidebarNavLinkLabel>Categorias</SidebarNavLinkLabel>
         </SidebarNavLink>
       </SidebarNav>
