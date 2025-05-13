@@ -16,9 +16,15 @@ import { DialogUpdateCategory } from './dialog-update-category'
 import { DialogCategoryDelete } from './dialog-delete-category'
 import { DialogInformationCategory } from './dialog-information-category'
 import { DialogCreateCategory } from './dialog-create-category'
+import { ResponseErrorType, api } from '@/services/api'
+import { useFormStatus } from 'react-dom'
+import { FormField, FormFieldsGroup } from '@/components/dashboard/form'
+import { Input } from '@/components/input'
+import { DialogFooter } from '@/components/dialog'
+import { cn } from '@/lib/utils'
 
-export default async function ListCategory() {
-  const { response } = null // requisicao para api
+export default async function ListCategories() {
+  const { response } = await api<categoryType[]>('GET', '/categories')
 
   if (!response) {
     return (
@@ -49,8 +55,8 @@ export default async function ListCategory() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {categories?.map((category: categoryType) => (
-              <TableRow key={category.id}>
+            {categories?.map((category: categoryType, index: number) => (
+              <TableRow key={index}>
                 <TableCell>{category.name}</TableCell>
                 <TableCell className="flex justify-end gap-2">
                   <DialogInformationCategory id={category.id}>
