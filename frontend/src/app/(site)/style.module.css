@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.page{
+    font-family: "Poppins", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: #F5F7FA;
+    position: relative;
+    padding-bottom: 340px;
+}
+
+.wrapper {
+    margin: 2rem;
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 18rem));
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.title {
+    color: #1A2E44;
+    padding-top: 16px;
+    font-weight: 800;
+    display: flex;
+    font-size: 36px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 660px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
