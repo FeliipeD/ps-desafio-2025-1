@@ -29,8 +29,10 @@
     color: #1A1A1A;
     padding-top: 16px;
     font-weight: 800;
-    display: flex;
     font-size: 36px;
+    font-style: normal;
+    text-align: center;
+    display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -73,6 +75,48 @@
     left: 2rem;
     transform: translateY(-50%);
     font-size: 1.2rem;
+    color: #1A1A1A;
+}
+
+/* Dark mode */
+.dark {
+    background: #1a1a1a;
+    color: #f5f5f5;
+  }
+  
+.dark .title {
+    color: #f5f5f5;
+}
+  
+.dark .filter input {
+    background-color: #333;
+    color: #f5f5f5;
+    border: 1px solid #555;
+}
+  
+.dark .search_icon {
+    color: #f5f5f5;
+}
+  
+/* Botão toggle */
+.toggle_dark {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 2rem 0 0;
+}
+  
+.toggle_button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.moon_icon {
     color: #1A1A1A;
 }
 

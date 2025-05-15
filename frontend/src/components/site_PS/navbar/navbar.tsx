@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import style from './style.module.css'
 import { getSession } from 'next-auth/react'
 import { toast, useToast } from '@/components/use-toast'
+import { FaHome, FaQuestionCircle, FaInfoCircle, FaUser } from 'react-icons/fa'
 
 interface navBarProps {
     logo: string
@@ -37,16 +38,26 @@ export default function Navbar({logo}:navBarProps) {
                     
                     <ul className={style.nav_links}>
                         <li className={style.nav_item}>
-                            <a href="#">Início</a>
+                            <a href="#">
+                                <FaHome className={style.nav_icon} />
+                                Início
+                            </a>
                         </li>
                         <li className={style.nav_item}>
-                            <a href="#">Ajuda</a>
+                            <a href="#">
+                                <FaQuestionCircle className={style.nav_icon} />
+                                Ajuda
+                            </a>
                         </li>
                         <li className={style.nav_item}>
-                            <a href="#">Sobre Nós</a>
+                            <a href="#">
+                                <FaInfoCircle className={style.nav_icon} />
+                                Sobre Nós
+                            </a>
                         </li>
                         <li className={style.nav_item}>
                             <a href="/admin" className={style.icon_button}>
+                                <FaUser className={style.nav_icon} />
                                 {isAuth ? 'Logado' : 'Logar'}
                             </a>
                         </li>

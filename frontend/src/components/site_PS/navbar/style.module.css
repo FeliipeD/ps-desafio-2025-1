@@ -3,6 +3,9 @@
     background: #2C2C2C;
     border-radius: 1.5px solid gray;
     z-index: 1000;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
 }
 
 .navbar_nav {
@@ -42,6 +45,14 @@
 .nav_item:hover>a {
     color: #a1d5fa;
     transition: 0.5s;
+}
+
+.nav_icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin: 0 7px;
 }
 
 @media screen and (max-width: 800px) {

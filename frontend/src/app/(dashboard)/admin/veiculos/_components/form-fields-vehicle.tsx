@@ -124,6 +124,10 @@ export default function FormFieldsVehicle({
             onChange={(e) => handleImageChange(e, setUpdateImage)}
             error={error?.errors?.image}
           />
+          <ImageForm 
+          className='aspect-square size-40' 
+          src={updateImage || vehicle?.image}
+          />
         </FormField>
 
         <FormField>

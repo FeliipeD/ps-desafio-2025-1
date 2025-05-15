@@ -3,6 +3,9 @@
     width: 100%;
     position: absolute;
     height: 340px;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .footer_content {
@@ -74,12 +77,13 @@
 .copyright {
     justify-content: center;
     align-items: center;
-    font-size: 20px;
-    padding: 20px;
-    font-weight: 200;
+    padding: 25px;
     background-color: black;
     color: #a1d5fa;
     text-align: center;
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-style: normal;
 }
 
 @media screen and (max-width: 768px) {
