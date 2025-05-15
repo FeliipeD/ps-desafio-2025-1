@@ -65,7 +65,7 @@ export function DialogUpdateCategory({
       })
     } else {
       toast({
-        title: 'Categoria editado com sucesso!',
+        title: 'Categoria editada com sucesso!',
       })
       setOpen(false)
     }
