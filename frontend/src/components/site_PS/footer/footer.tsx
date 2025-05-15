@@ -10,8 +10,8 @@ export default function Footer(){
         <footer className={style.footer}>
             <div className={style.footer_content}>
                 <div className={style.contacts}>
-                    <h2>Seu site com todos os ninjas do mundo!</h2>
-                    <p>Descubra os ninja mais poderosos de todos os tempos!</p>
+                    <h2>A concessionária que tem o veículo certo para você!</h2>
+                    <p>Encontre os veículos perfeitos para o seu estilo de vida!</p>
                     <div className={style.social_media}>
                         <a href="#" className={style.social_link} id='instagram'>
                             <FaInstagram /> 
@@ -32,13 +32,13 @@ export default function Footer(){
 
                     <li>
                         <a href="#" className={style.sobre_link}>
-                            AdaptiCast
+                            Filiais
                         </a>
                     </li>
 
                     <li>
                         <a href="#" className={style.sobre_link}>
-                            Adapti - Soluções Web
+                            Trabalhe Conosco
                         </a>
                     </li>
                 </ul>
@@ -50,7 +50,7 @@ export default function Footer(){
 
                     <li>
                         <a href="#" className={style.sobre_link}>
-                            Spotify
+                            Adapti
                         </a>
                     </li>
 
@@ -62,7 +62,7 @@ export default function Footer(){
                 </ul>
             </div>
             <div className={style.copyright}>
-                2025, feito com 🤍 por Adapti Soluções Web
+                © 2025 Felipe da Costa Morais | Todos Direitos Reservados
             </div>
         </footer>
     )

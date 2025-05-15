@@ -48,7 +48,7 @@
 }
 
 .social_media>.social_link:hover {
-    color: #FF7F00;
+    color: #a1d5fa;
 }
 
 .social_media>.social_link a {
@@ -68,7 +68,7 @@
 }
 
 .list>li>.sobre_link:hover {
-    color: #FF7F00;
+    color: #a1d5fa;
 }
 
 .copyright {
@@ -78,7 +78,7 @@
     padding: 20px;
     font-weight: 200;
     background-color: black;
-    color: #FF7F00;
+    color: #a1d5fa;
     text-align: center;
 }
 

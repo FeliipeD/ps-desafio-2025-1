@@ -113,4 +113,21 @@ class VehicleController extends Controller
 
         return response()->json(['message' => 'Veículo deletado com sucesso!']);
     }
+
+    public function buy($id)
+    {
+        $vehicle = $this->vehicle->findOrFail($id);
+
+        if ($vehicle->quantity_in_stock <= 0) {
+            return response()->json(['message' => 'Veículo esgotado']);
+        }
+
+        $vehicle->quantity_in_stock -= 1;
+        $vehicle->save();
+
+        return response()->json([
+            'message' => 'Compra realizada com sucesso!',
+            'new_quantity_in_stock' => $vehicle->quantity_in_stock,
+        ]);
+    }
 }

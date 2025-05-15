@@ -35,9 +35,9 @@ export default function Home() {
         <Navbar logo="./images/mv_logo.png"/>
         <h1 className={style.title}>Veículos</h1>
         <div className={style.wrapper}>
-        {vehicles?.map((vehicle: vehicleType, index: number) => (
-          <Card vehicle={vehicle} key={index}/>
-        ))}
+          {vehicles?.map((vehicle: vehicleType, index: number) => (
+            <Card vehicle={vehicle} key={index}/>
+          ))}
         </div>
         <Footer/>
       </div>
