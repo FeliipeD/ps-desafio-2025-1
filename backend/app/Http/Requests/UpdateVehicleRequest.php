@@ -25,7 +25,7 @@ class UpdateVehicleRequest extends FormRequest
             'name' => ['sometimes', 'min:3', 'max:80'],
             'brand' => ['sometimes', 'min:3', 'max:30'],
             'manufacturing_year' => ['sometimes', 'integer'],
-            'image' => ['file'],
+            'image' => ['sometimes', 'file'],
             'category_id' => ['sometimes'],
             'quantity_in_stock' => ['integer'],
         ];

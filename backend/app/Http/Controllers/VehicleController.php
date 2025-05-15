@@ -93,7 +93,7 @@ class VehicleController extends Controller
             } finally {
                 $path = $request->file('image')->store('vehicles', 'public');
 
-                $data['iamge'] = url('storage'.$path);
+                $data['image'] = url('storage'.$path);
             }
         }
 
