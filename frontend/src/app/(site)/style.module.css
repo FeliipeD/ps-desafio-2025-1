@@ -88,3 +88,9 @@
     }
 }
 
+@media screen and (max-width: 391px) {
+    .filter input {
+        font-size: 0.8rem;
+    }
+}
+
